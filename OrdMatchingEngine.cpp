@@ -496,8 +496,13 @@ int main()
 			}
 					
 			std::unique_ptr<Order> p(std::make_unique<Order>(currClientId, ordSide, px, qty));
-			me.submitNewOrder(std::move(p));
-			std::cout << "Placed new order" << std::endl;
+			try {
+				me.submitNewOrder(std::move(p));
+				std::cout << "Submit new order" << std::endl;
+			}
+			catch (const std::runtime_error& re) {
+				std::cerr << "Failed to submit new order" << std::endl;
+			}
 			break;
 		}
 		case 4:
@@ -508,8 +513,13 @@ int main()
 			std::cout << "Enter orderId: ";
 			std::cin >> canOrdId;
 
-			me.submitCanOrder(currClientId, canOrdId);
-			std::cout << "Placed can order " << canOrdId << std::endl;
+			try {
+				me.submitCanOrder(currClientId, canOrdId);
+				std::cout << "Submit can order " << canOrdId << std::endl;
+			}
+			catch (const std::runtime_error& re) {
+				std::cerr << "Failed to submit can order" << std::endl;
+			}
 			break;
 		}
 		case 5:
