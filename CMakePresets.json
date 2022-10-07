@@ -46,7 +46,8 @@
                 "strategy": "external"
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+              "CMAKE_BUILD_TYPE": "Debug",
+              "CMAKE_VERBOSE_MAKEFILE": true
             }
         },
         {
@@ -64,7 +65,8 @@
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "installDir": "${sourceDir}/out/install/${presetName}",
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
+              "CMAKE_BUILD_TYPE": "Debug",
+              "CMAKE_VERBOSE_MAKEFILE": true
             },
             "condition": {
                 "type": "equals",
