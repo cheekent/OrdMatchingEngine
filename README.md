@@ -5,10 +5,11 @@ Prices can support up to 2 decimal places. To send market order just set the pri
 
 ## Build
 
-Need CMake and g++ 14 compiler to build.
+Need CMake and g++ 14 compiler to build. On the top level of the code directory do the following:
 	
-	cmake .
-
+	mkdir build
+	cd build
+	cmake ..
 	make
 	
 I used Visual Studio to build and run it.
