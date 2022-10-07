@@ -6,9 +6,11 @@ Prices can support up to 2 decimal places. To send market order just set the pri
 ## Build
 
 Need CMake and g++ 14 compiler to build.
+	
 	cmake .
-	make
 
+	make
+	
 I used Visual Studio to build and run it.
 
 ## Menu
