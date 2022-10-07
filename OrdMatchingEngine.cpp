@@ -457,7 +457,7 @@ int main()
 		case 3:
 		{
 			char	chSide(0);
-			double	price(0);
+			float	price(0.0);
 			TQty qty(0);
 			OrdSide	ordSide(OrdSide::NONE);
 

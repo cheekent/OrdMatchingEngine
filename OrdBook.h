@@ -50,6 +50,7 @@ public:
 	inline Order* frontOrder() { return m_orders.front(); }
 	inline void popFrontOrder() { m_orders.pop_front(); }
 
+	inline const TPrice& px() const { return m_px; }
 	inline const TQty vol() const
 	{
 		TQty	vol(0);
