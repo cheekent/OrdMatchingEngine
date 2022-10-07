@@ -395,7 +395,7 @@ public:
 	void onExec(Order* order, Execution* event) override 
 	{
 		std::cout << "onExec clientId " << clientId() << " ordId " << order->ordId() << " " << toString(order->state()) << " " << toString(order->side());
-		std::cout << " exePx " << event->pxExec() << " exeQty " << event->qtyExec();
+		std::cout << " execId " << event->execId() << " exePx " << event->pxExec() << " exeQty " << event->qtyExec();
 		std::cout << " cumOut " << order->qtyOutstanding() << " cumExe " << order->qtyExec() << " cumCan " << order->qtyCancelled() << std::endl;
 	}
 
